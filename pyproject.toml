@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kunnix"
+version = "1.0.0"
+description = "Kunnix Memory & Task Scheduling System - Give Your AI Assistant Memory & Task Scheduling"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Kunnix Team", email = "kunnix@example.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["ai", "memory", "task", "scheduling", "workbuddy", "llm", "agent"]
+requires-python = ">=3.10"
+dependencies = [
+    "lancedb>=0.5.0",
+    "sentence-transformers>=2.2.0",
+    "whoosh>=2.7.4",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+docs = [
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kunnix-ai/memory-task-system"
+Documentation = "https://kunnix-ai.github.io/docs"
+Repository = "https://github.com/kunnix-ai/memory-task-system"
+"Bug Tracker" = "https://github.com/kunnix-ai/memory-task-system/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kunnix*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
