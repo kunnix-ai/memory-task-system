@@ -50,7 +50,7 @@ npm install
 npm run docs:dev
 ```
 
-访问 http://localhost:5173 查看网站。
+访问本地服务器查看网站（地址会在启动时显示）。
 
 ### 4. 实时预览
 
