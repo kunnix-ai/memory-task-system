@@ -1,0 +1,22 @@
+{
+  "name": "kunnix-docs",
+  "version": "1.0.0",
+  "description": "Kunnix Memory & Task Scheduling System - Official Documentation",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "kunnix",
+    "ai-memory",
+    "task-scheduling",
+    "ai-assistant",
+    "llm"
+  ],
+  "author": "Kunnix Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}
