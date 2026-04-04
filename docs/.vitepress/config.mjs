@@ -6,6 +6,9 @@ export default defineConfig({
   titleTemplate: ':title - Kunnix',
   description: '让 AI 拥有永久记忆与任务调度能力',
   
+  // GitHub Pages 基础路径（重要！）
+  base: '/memory-task-system/',
+  
   // 语言和主题
   lang: 'zh-CN',
   themeConfig: {
